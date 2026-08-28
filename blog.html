@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Brightlands International</title>
+<script>(function(){try{var t=localStorage.getItem('bl-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="notice-bar">
+  <span><strong>Admissions Open</strong> — Fall 2027 applications now being accepted. <a href="contact.html" style="text-decoration:underline;">Apply Today →</a></span>
+  <button class="notice-close" aria-label="Dismiss notice">&times;</button>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17" cy="17" r="16" fill="#0F5257"/>
+        <path d="M9 20L17 9L25 20" stroke="#FFC145" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12.5 24.5L17 20L21.5 24.5" stroke="#FF6B4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">Brightlands<br>International</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="history.html">History</a>
+      <a href="teachers.html">Teachers</a>
+      <a href="students.html">Students</a>
+      <a href="results.html">Exam Results</a>
+      <a href="about.html">About</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="icon-light">&#9789;</span>
+      <span class="icon-dark">&#9728;</span>
+    </button>
+    <a href="contact.html" class="btn btn-primary btn-sm">Enquire</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Blog</div>
+      <h1>News from campus.</h1>
+      <p>Updates from classrooms, clubs, athletics, and the admissions office — filter by category below.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+
+      <div class="blog-featured reveal">
+        <img src="https://picsum.photos/id/1084/700/560" alt="Model UN team at Brightlands">
+        <div class="blog-body">
+          <span class="blog-tag">Clubs &amp; Activities</span>
+          <h2>Model UN Team Places Second at Regionals</h2>
+          <p>Eleven delegates, one very long weekend, and a second-place finish at the Pacific Northwest Regional Conference — the team's best result in program history.</p>
+          <span class="blog-date">August 14, 2026</span>
+          <a class="btn btn-ghost" href="#" style="margin-top:1rem;">Read Full Story →</a>
+        </div>
+      </div>
+
+      <div class="filter-bar reveal" style="margin-bottom: 2rem;">
+        <button class="filter-btn active" data-blog-filter="all">All Posts</button>
+        <button class="filter-btn" data-blog-filter="academics">Academics</button>
+        <button class="filter-btn" data-blog-filter="clubs">Clubs &amp; Activities</button>
+        <button class="filter-btn" data-blog-filter="admissions">Admissions</button>
+        <button class="filter-btn" data-blog-filter="community">Community</button>
+      </div>
+
+      <div class="blog-grid reveal">
+
+        <article class="blog-card" data-category="academics">
+          <img src="https://picsum.photos/id/1074/500/320" alt="">
+          <div class="blog-card-body">
+            <span class="blog-tag">Academics</span>
+            <span class="blog-date">Aug 14, 2026</span>
+            <h3>Senior Capstones: A Preview of This Year's Projects</h3>
+            <p>From a solar water-heater prototype to a study of local bird migration.</p>
+            <a class="more" href="#">Read more →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="clubs">
+          <img src="https://picsum.photos/id/1080/500/320" alt="">
+          <div class="blog-card-body">
+            <span class="blog-tag">Clubs &amp; Activities</span>
+            <span class="blog-date">Jul 28, 2026</span>
+            <h3>Model UN Team Places Second at Regionals</h3>
+            <p>Eleven delegates, one very long weekend, and a second-place finish.</p>
+            <a class="more" href="#">Read more →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="admissions">
+          <img src="https://picsum.photos/id/1076/500/320" alt="">
+          <div class="blog-card-body">
+            <span class="blog-tag">Admissions</span>
+            <span class="blog-date">Jul 9, 2026</span>
+            <h3>Applications for Fall 2027 Now Open</h3>
+            <p>What's new in this year's process, and what stays exactly the same.</p>
+            <a class="more" href="#">Read more →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="academics">
+          <img src="https://picsum.photos/id/1043/500/320" alt="">
+          <div class="blog-card-body">
+            <span class="blog-tag">Academics</span>
+            <span class="blog-date">Jun 20, 2026</span>
+            <h3>Inside the Grade 7 Research Symposium</h3>
+            <p>This year's independent research topics ranged from microplastics to local oral history.</p>
+            <a class="more" href="#">Read more →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="community">
+          <img src="https://picsum.photos/id/1060/500/320" alt="">
+          <div class="blog-card-body">
+            <span class="blog-tag">Community</span>
+            <span class="blog-date">Jun 5, 2026</span>
+            <h3>Alumni Return for the Global Careers Fair</h3>
+            <p>Thirty-five graduates came back to campus to talk careers with current juniors and seniors.</p>
+            <a class="more" href="#">Read more →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="clubs">
+          <img src="https://picsum.photos/id/1069/500/320" alt="">
+          <div class="blog-card-body">
+            <span class="blog-tag">Clubs &amp; Activities</span>
+            <span class="blog-date">May 22, 2026</span>
+            <h3>Robotics Team Reaches State Semifinals</h3>
+            <p>A first in program history, and the team is already rebuilding for next season.</p>
+            <a class="more" href="#">Read more →</a>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Brightlands International</h4>
+        <p>An internationally minded Pre-K–12 school in Ellery Bay, teaching curious minds to think globally since 1992.</p>
+        <form class="newsletter">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+        </form>
+        <p class="newsletter-note form-note"></p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="history.html">Our History</a>
+        <a href="teachers.html">Our Teachers</a>
+        <a href="students.html">Our Students</a>
+        <a href="results.html">Exam Results</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>14 Lakeview Terrace<br>Ellery Bay, WA 98110</p>
+        <p>admissions@brightlands.example<br>(360) 555-0199</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Brightlands International School. All rights reserved.</span>
+      <span>Design template — replace placeholder text, photos, and contact details before publishing.</span>
+    </div>
+  </div>
+</footer>
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">&#8593;</button>
+<script src="script.js"></script>
+</body>
+</html>

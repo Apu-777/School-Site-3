@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Brightlands International</title>
+<script>(function(){try{var t=localStorage.getItem('bl-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="notice-bar">
+  <span><strong>Admissions Open</strong> — Fall 2027 applications now being accepted. <a href="contact.html" style="text-decoration:underline;">Apply Today →</a></span>
+  <button class="notice-close" aria-label="Dismiss notice">&times;</button>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17" cy="17" r="16" fill="#0F5257"/>
+        <path d="M9 20L17 9L25 20" stroke="#FFC145" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12.5 24.5L17 20L21.5 24.5" stroke="#FF6B4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">Brightlands<br>International</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="history.html">History</a>
+      <a href="teachers.html">Teachers</a>
+      <a href="students.html">Students</a>
+      <a href="results.html">Exam Results</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="icon-light">&#9789;</span>
+      <span class="icon-dark">&#9728;</span>
+    </button>
+    <a href="contact.html" class="btn btn-primary btn-sm">Enquire</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+      <h1>Talk to the admissions office.</h1>
+      <p>Whether you're touring, applying, or just curious — the fastest way to reach us is below.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap contact-grid">
+
+      <div>
+        <h2>Get in Touch</h2>
+        <div class="contact-info-card">
+          <span class="icon">@</span>
+          <div>
+            <h3>Email</h3>
+            <p>admissions@brightlands.example</p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <span class="icon">&#9742;</span>
+          <div>
+            <h3>Phone</h3>
+            <p>(360) 555-0199, Mon–Fri, 8:00am–4:00pm</p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <span class="icon">&#9673;</span>
+          <div>
+            <h3>Address</h3>
+            <p>14 Lakeview Terrace, Ellery Bay, WA 98110</p>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <span class="icon">&#128337;</span>
+          <div>
+            <h3>Office Hours</h3>
+            <p>Monday–Friday, 8:00am–4:00pm. Campus tours run Tuesday and Thursday mornings.</p>
+          </div>
+        </div>
+
+        <div class="map-box">
+          Map embed placeholder — replace with a Google Maps or OpenStreetMap embed of 14 Lakeview Terrace, Ellery Bay, WA.
+        </div>
+      </div>
+
+      <div>
+        <h2>Send a Message</h2>
+        <form class="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Jordan Casey" required>
+              <span class="field-error">Please enter your name.</span>
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jordan@example.com" required>
+              <span class="field-error">Please enter a valid email address.</span>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="(360) 555-0100">
+            </div>
+            <div class="form-field">
+              <label for="reason">I'm reaching out about</label>
+              <select id="reason" name="reason">
+                <option>Admissions &amp; Enrollment</option>
+                <option>Campus Tour Request</option>
+                <option>Exam Results / Registrar</option>
+                <option>General Question</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about what you're looking for..." required></textarea>
+              <span class="field-error">Please write a short message.</span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note form-status">We typically reply within two business days.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Brightlands International</h4>
+        <p>An internationally minded Pre-K–12 school in Ellery Bay, teaching curious minds to think globally since 1992.</p>
+        <form class="newsletter">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+        </form>
+        <p class="newsletter-note form-note"></p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="history.html">Our History</a>
+        <a href="teachers.html">Our Teachers</a>
+        <a href="students.html">Our Students</a>
+        <a href="results.html">Exam Results</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>14 Lakeview Terrace<br>Ellery Bay, WA 98110</p>
+        <p>admissions@brightlands.example<br>(360) 555-0199</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Brightlands International School. All rights reserved.</span>
+      <span>Design template — replace placeholder text, photos, and contact details before publishing.</span>
+    </div>
+  </div>
+</footer>
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">&#8593;</button>
+<script src="script.js"></script>
+</body>
+</html>
