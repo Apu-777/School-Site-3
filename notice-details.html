@@ -1,47 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notice Board — Brightlands International</title>
-<script>(function(){try{var t=localStorage.getItem('bl-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<script>(function(){try{var t=localStorage.getItem('nd-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<script>try{if(localStorage.getItem("site-lang")==="en"){document.documentElement.lang="en";document.documentElement.classList.add("lang-pending");}}catch(e){}</script>
+<title data-en="Notice Board — Nobodiganta International">নোটিশ বোর্ড — নবদিগন্ত ইন্টারন্যাশনাল</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Anek+Bangla:wght@600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="notice-bar">
-  <span><strong>Admissions Open</strong> — Fall 2027 applications now being accepted. <a href="contact.html" style="text-decoration:underline;">Apply Today →</a></span>
-  <button class="notice-close" aria-label="Dismiss notice">&times;</button>
+  <span data-en="&lt;strong&gt;Admissions Open&lt;/strong&gt; — applications for the 2027–28 school year are now being accepted. &lt;a href=&quot;contact.html&quot; style=&quot;text-decoration:underline;&quot;&gt;Apply Today →&lt;/a&gt;"><strong>ভর্তি চলছে</strong> — ২০২৭–২৮ শিক্ষাবর্ষের আবেদন নেওয়া হচ্ছে। <a href="contact.html" style="text-decoration:underline;">এখনই আবেদন করুন →</a></span>
+  <button class="notice-close" aria-label="নোটিশ বন্ধ করুন" data-en-aria-label="Dismiss notice">&times;</button>
 </div>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="17" cy="17" r="16" fill="#0F5257"/>
         <path d="M9 20L17 9L25 20" stroke="#FFC145" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12.5 24.5L17 20L21.5 24.5" stroke="#FF6B4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span class="brand-name">Brightlands<br>International</span>
+      <span class="brand-name" data-en="Nobodiganta&lt;br&gt;International">নবদিগন্ত<br>ইন্টারন্যাশনাল</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    <button class="nav-toggle" aria-label="মেনু খুলুন" data-en-aria-label="Toggle menu"><span></span></button>
     <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="history.html">History</a>
-      <a href="teachers.html">Teachers</a>
-      <a href="students.html">Students</a>
-      <a href="results.html">Exam Results</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-en="Home">হোম</a>
+      <a href="history.html" data-en="History">ইতিহাস</a>
+      <a href="teachers.html" data-en="Teachers">শিক্ষক</a>
+      <a href="students.html" data-en="Students">শিক্ষার্থী</a>
+      <a href="results.html" data-en="Exam Results">ফলাফল</a>
+      <a href="about.html" data-en="About">আমাদের কথা</a>
+      <a href="blog.html" data-en="Blog">ব্লগ</a>
+      <a href="contact.html" data-en="Contact">যোগাযোগ</a>
     </nav>
-    <button class="theme-toggle" aria-label="Toggle dark mode">
+    <div class="lang-switch" role="group" aria-label="ভাষা বেছে নিন / Choose language">
+      <button type="button" data-lang="bn" aria-pressed="true" lang="bn">বাংলা</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+    <button class="theme-toggle" aria-label="ডার্ক মোড চালু/বন্ধ" data-en-aria-label="Toggle dark mode">
       <span class="icon-light">&#9789;</span>
       <span class="icon-dark">&#9728;</span>
     </button>
-    <a href="contact.html" class="btn btn-primary btn-sm">Enquire</a>
+    <a href="contact.html" class="btn btn-primary btn-sm" data-en="Enquire">খোঁজ নিন</a>
   </div>
 </header>
 
@@ -49,22 +55,22 @@
 
   <section class="page-hero">
     <div class="wrap">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Notice Board</div>
-      <h1>Notice Board Archive</h1>
-      <p>Full details for every notice posted to the Home page board.</p>
+      <div class="breadcrumb"><a href="index.html" data-en="Home">হোম</a> / <span data-en="Notice Board">নোটিশ বোর্ড</span></div>
+      <h1 data-en="Notice Board Archive">নোটিশ বোর্ড আর্কাইভ</h1>
+      <p data-en="Full details for every notice posted to the Home page board.">হোম পেজের বোর্ডে দেওয়া প্রতিটা নোটিশের বিস্তারিত।</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
       <div class="notice-detail reveal" id="admissions-open">
-        <span class="notice-tag notice-tag-admissions">Admissions</span>
-        <span class="notice-detail-date">Published August 28, 2026</span>
-        <h2>Fall 2027 Applications Now Open</h2>
-        <p>The application portal for the 2027–28 school year is now live for all grades, Pre-K through Grade 12. Families applying for Early Decision must submit a complete application, including transcripts and one teacher recommendation, by <strong>November 15, 2026</strong>. Early Decision applicants will receive a decision by December 12.</p>
-        <p>Regular Decision applications remain open through <strong>February 1, 2027</strong>, with decisions released by March 1. Financial aid applications are reviewed separately from admissions and can be submitted any time before your admissions decision — applying for aid never affects your child's admission outcome.</p>
-        <p>Required documents: completed application form, most recent two years of report cards, one teacher recommendation, and a short student reflection (Grades 6 and up only). A non-refundable $75 application fee applies; fee waivers are available on request.</p>
-        <a href="index.html#notice-board" class="btn btn-ghost btn-sm">← Back to Notice Board</a>
+        <span class="notice-tag notice-tag-admissions" data-en="Admissions">ভর্তি</span>
+        <span class="notice-detail-date" data-en="Published August 28, 2026">প্রকাশ: ২৮ আগস্ট, ২০২৬</span>
+        <h2 data-en="2027–28 Applications Now Open">২০২৭–২৮ শিক্ষাবর্ষে ভর্তির আবেদন শুরু</h2>
+        <p data-en="Online applications for the 2027–28 school year are now open for every class from Playgroup to A Level. Families applying for early admission must submit a complete application, including report cards and one teacher's recommendation, by &lt;strong&gt;November 15, 2026&lt;/strong&gt;. Early admission decisions will be shared by December 12.">২০২৭–২৮ শিক্ষাবর্ষের জন্য প্লে-গ্রুপ থেকে এ লেভেল পর্যন্ত সব ক্লাসে অনলাইন আবেদন শুরু হয়েছে। আর্লি অ্যাডমিশনের জন্য রিপোর্ট কার্ড আর একজন শিক্ষকের সুপারিশপত্রসহ পুরো আবেদন জমা দিতে হবে <strong>১৫ নভেম্বর, ২০২৬</strong>-এর মধ্যে। ফলাফল জানানো হবে ১২ ডিসেম্বরের মধ্যে।</p>
+        <p data-en="Regular applications stay open until &lt;strong&gt;February 1, 2027&lt;/strong&gt;, with decisions by March 1. Scholarship applications are reviewed separately from admissions and can be sent in any time before your admission decision — asking for a scholarship never affects your child's chances.">সাধারণ ভর্তির আবেদন চলবে <strong>১ ফেব্রুয়ারি, ২০২৭</strong> পর্যন্ত, ফলাফল ১ মার্চের মধ্যে। বৃত্তির আবেদন ভর্তি থেকে আলাদাভাবে দেখা হয়, আর ভর্তির সিদ্ধান্তের আগে যেকোনো সময় জমা দেওয়া যায় — বৃত্তি চাইলে ভর্তির সুযোগে কোনো প্রভাব পড়ে না।</p>
+        <p data-en="You'll need: the completed application form, report cards from the last two years, one teacher's recommendation, and a short self-introduction written by the student (Class 6 and up only). The non-refundable application fee is Tk 2,000; waivers are available on request.">যা যা লাগবে: পূরণ করা আবেদন ফরম, শেষ দুই বছরের রিপোর্ট কার্ড, একজন শিক্ষকের সুপারিশপত্র, আর শিক্ষার্থীর নিজের লেখা ছোট একটা পরিচিতি (শুধু ক্লাস সিক্স ও তার ওপরে)। আবেদন ফি ২,০০০ টাকা, ফেরতযোগ্য না; দরকার হলে মওকুফের আবেদন করা যায়।</p>
+        <a href="index.html#notice-board" class="btn btn-ghost btn-sm" data-en="← Back to Notice Board">← নোটিশ বোর্ডে ফিরুন</a>
       </div>
     </div>
   </section>
@@ -72,15 +78,16 @@
   <section class="section alt">
     <div class="wrap">
       <div class="notice-detail reveal" id="academic-calendar">
-        <span class="notice-tag notice-tag-academics">Academics</span>
-        <span class="notice-detail-date">Published August 21, 2026</span>
-        <h2>2026–27 Academic Calendar Published</h2>
-        <p>The full academic calendar for the 2026–27 school year is now available in the parent portal. Highlights include:</p>
-        <p><strong>Fall Term:</strong> September 2 – December 18, 2026, with a one-week break the week of November 23 for Thanksgiving.<br>
-        <strong>Winter Term:</strong> January 5 – March 19, 2027, including mid-year exam week (January 26–30).<br>
-        <strong>Spring Term:</strong> April 5 – June 11, 2027, ending with final exams and the Grade 12 graduation ceremony on June 12.</p>
-        <p>Two teacher in-service days (no classes for students) are scheduled for October 9 and February 12. A downloadable PDF version of the full calendar, including early-dismissal Fridays, is available from the front office or the parent portal.</p>
-        <a href="index.html#notice-board" class="btn btn-ghost btn-sm">← Back to Notice Board</a>
+        <span class="notice-tag notice-tag-academics" data-en="Academics">একাডেমিক</span>
+        <span class="notice-detail-date" data-en="Published August 21, 2026">প্রকাশ: ২১ আগস্ট, ২০২৬</span>
+        <h2 data-en="2026–27 Academic Calendar Published">২০২৬–২৭ শিক্ষাবর্ষের একাডেমিক ক্যালেন্ডার প্রকাশ</h2>
+        <p data-en="The full calendar for the 2026–27 school year is now in the parent portal. Highlights:">২০২৬–২৭ শিক্ষাবর্ষের পুরো ক্যালেন্ডার এখন প্যারেন্ট পোর্টালে পাওয়া যাচ্ছে। মূল তারিখগুলো:</p>
+        <p data-en="&lt;strong&gt;Term 1:&lt;/strong&gt; September 1 – December 17, 2026, with a Durga Puja break from October 18 to 22.&lt;br&gt;&lt;strong&gt;Term 2:&lt;/strong&gt; January 3 – March 18, 2027, including mid-year exams (January 24–28).&lt;br&gt;&lt;strong&gt;Term 3:&lt;/strong&gt; April 4 – June 10, 2027, ending with final exams and the A Level farewell on June 12.">
+          <strong>প্রথম টার্ম:</strong> ১ সেপ্টেম্বর – ১৭ ডিসেম্বর, ২০২৬; দুর্গাপূজায় ১৮–২২ অক্টোবর ছুটি।<br>
+          <strong>দ্বিতীয় টার্ম:</strong> ৩ জানুয়ারি – ১৮ মার্চ, ২০২৭; এর মধ্যে মিড-ইয়ার পরীক্ষা ২৪–২৮ জানুয়ারি।<br>
+          <strong>তৃতীয় টার্ম:</strong> ৪ এপ্রিল – ১০ জুন, ২০২৭; শেষে ফাইনাল পরীক্ষা, আর ১২ জুন এ লেভেল ব্যাচের বিদায় অনুষ্ঠান।</p>
+        <p data-en="Two teacher training days (no classes for students) fall on October 8 and February 11. Eid holidays are marked separately in the calendar. A PDF of the full calendar is available from the front office or the parent portal.">শিক্ষকদের প্রশিক্ষণের জন্য ৮ অক্টোবর আর ১১ ফেব্রুয়ারি শিক্ষার্থীদের ক্লাস বন্ধ থাকবে। ঈদের ছুটি ক্যালেন্ডারে আলাদা করে দেওয়া আছে। পুরো ক্যালেন্ডারের পিডিএফ ফ্রন্ট অফিস বা প্যারেন্ট পোর্টাল থেকে নিতে পারবেন।</p>
+        <a href="index.html#notice-board" class="btn btn-ghost btn-sm" data-en="← Back to Notice Board">← নোটিশ বোর্ডে ফিরুন</a>
       </div>
     </div>
   </section>
@@ -88,26 +95,26 @@
   <section class="section">
     <div class="wrap">
       <div class="notice-detail reveal" id="ptc-schedule">
-        <span class="notice-tag notice-tag-events">Events</span>
-        <span class="notice-detail-date">Published August 14, 2026</span>
-        <h2>Parent-Teacher Conference Schedule Released</h2>
-        <p>Fall Parent-Teacher Conferences are scheduled for <strong>September 21 and 22, 2026</strong>. Sign-up slots open this Friday, August 28, at 9:00am through the parent portal, and are booked on a first-come, first-served basis.</p>
-        <p>Each conference is a 15-minute slot with your child's homeroom or advisory teacher. Families with children in multiple grades can request back-to-back slots where possible — note this in the "comments" field when booking. A virtual option over video call is available for families who cannot attend in person; select this when booking your slot.</p>
-        <p>If you're unable to find a slot that works, contact your child's teacher directly to arrange an alternate time.</p>
-        <a href="index.html#notice-board" class="btn btn-ghost btn-sm">← Back to Notice Board</a>
+        <span class="notice-tag notice-tag-events" data-en="Events">অনুষ্ঠান</span>
+        <span class="notice-detail-date" data-en="Published August 14, 2026">প্রকাশ: ১৪ আগস্ট, ২০২৬</span>
+        <h2 data-en="Parent-Teacher Meeting Schedule Released">অভিভাবক-শিক্ষক সভার সময়সূচি প্রকাশ</h2>
+        <p data-en="Term 1 parent-teacher meetings will be held on &lt;strong&gt;September 20 and 21, 2026&lt;/strong&gt;. Slot booking opens in the parent portal on Thursday, August 27 at 9:00am, first come, first served.">প্রথম টার্মের অভিভাবক-শিক্ষক সভা হবে <strong>২০ ও ২১ সেপ্টেম্বর, ২০২৬</strong>। প্যারেন্ট পোর্টালে স্লট বুকিং শুরু হবে ২৭ আগস্ট বৃহস্পতিবার সকাল ৯টায় — আগে এলে আগে পাবেন।</p>
+        <p data-en="Each meeting is a 15-minute slot with your child's class teacher or advisor. Families with more than one child can ask for back-to-back slots — mention it in the comments box when booking. A video-call option is available if you can't come in person.">প্রতিটা সভা ১৫ মিনিটের, আপনার সন্তানের ক্লাস টিচার বা অ্যাডভাইজারের সাথে। একাধিক সন্তান থাকলে পরপর স্লট চাইতে পারেন — বুকিংয়ের সময় মন্তব্যের ঘরে লিখে দিন। সরাসরি আসতে না পারলে ভিডিও কলেও কথা বলা যাবে।</p>
+        <p data-en="If none of the slots work for you, contact your child's teacher directly to arrange another time.">সুবিধামতো স্লট না পেলে সরাসরি শিক্ষকের সাথে যোগাযোগ করে অন্য একটা সময় ঠিক করে নিন।</p>
+        <a href="index.html#notice-board" class="btn btn-ghost btn-sm" data-en="← Back to Notice Board">← নোটিশ বোর্ডে ফিরুন</a>
       </div>
     </div>
   </section>
 
   <section class="section alt">
     <div class="wrap">
-      <div class="notice-detail reveal" id="labor-day">
-        <span class="notice-tag notice-tag-holiday">Holiday</span>
-        <span class="notice-detail-date">Published August 5, 2026</span>
-        <h2>Campus Closed for Labor Day</h2>
-        <p>Brightlands campus will be closed on <strong>Monday, September 1, 2026</strong> in observance of Labor Day. This closure includes all classes, the front office, before- and after-school care, and all athletics practices.</p>
-        <p>Regular classes and the normal school-day schedule resume on <strong>Tuesday, September 2</strong>. If your family has a scheduled campus tour or admissions appointment on September 1, our admissions office will reach out directly to reschedule.</p>
-        <a href="index.html#notice-board" class="btn btn-ghost btn-sm">← Back to Notice Board</a>
+      <div class="notice-detail reveal" id="puja-holiday">
+        <span class="notice-tag notice-tag-holiday" data-en="Holiday">ছুটি</span>
+        <span class="notice-detail-date" data-en="Published September 5, 2026">প্রকাশ: ৫ সেপ্টেম্বর, ২০২৬</span>
+        <h2 data-en="School Closed for Durga Puja">দুর্গাপূজায় স্কুল বন্ধ</h2>
+        <p data-en="The school will be closed from &lt;strong&gt;October 18 to 22, 2026&lt;/strong&gt; for Durga Puja. This includes all classes, the front office, day care, and all sports practice.">শারদীয় দুর্গাপূজা উপলক্ষে <strong>১৮ থেকে ২২ অক্টোবর, ২০২৬</strong> পর্যন্ত স্কুল বন্ধ থাকবে। এই কয়দিন ক্লাস, ফ্রন্ট অফিস, ডে-কেয়ার আর সব খেলার অনুশীলন বন্ধ।</p>
+        <p data-en="Regular classes resume on &lt;strong&gt;Sunday, October 25&lt;/strong&gt;. If your family had a campus tour or admissions appointment during the break, the admissions office will call you to reschedule.">স্বাভাবিক রুটিনে ক্লাস আবার শুরু হবে <strong>২৫ অক্টোবর রবিবার</strong>। এই সময়ের মধ্যে কারও ক্যাম্পাস ট্যুর বা ভর্তির অ্যাপয়েন্টমেন্ট থাকলে ভর্তি অফিস থেকে ফোন করে নতুন সময় জানিয়ে দেওয়া হবে।</p>
+        <a href="index.html#notice-board" class="btn btn-ghost btn-sm" data-en="← Back to Notice Board">← নোটিশ বোর্ডে ফিরুন</a>
       </div>
     </div>
   </section>
@@ -115,13 +122,13 @@
   <section class="section">
     <div class="wrap">
       <div class="notice-detail reveal" id="sports-tryouts">
-        <span class="notice-tag notice-tag-events">Events</span>
-        <span class="notice-detail-date">Published August 8, 2026</span>
-        <h2>Fall Sports Tryout Sign-Ups Open</h2>
-        <p>Tryout sign-ups for our fall athletics season are now open. Soccer, swimming, and cross-country tryouts begin the week of <strong>September 8, 2026</strong>, and run after school through September 12.</p>
-        <p>Students trying out for any team must have a current physical exam on file with the school nurse — forms are available at the front office or in the parent portal under "Health Forms." Students without a physical on file will not be permitted to try out.</p>
-        <p>Tryout times and locations by sport will be posted outside the gymnasium and emailed to families the week before tryouts begin. Questions can be directed to the athletics office.</p>
-        <a href="index.html#notice-board" class="btn btn-ghost btn-sm">← Back to Notice Board</a>
+        <span class="notice-tag notice-tag-events" data-en="Events">অনুষ্ঠান</span>
+        <span class="notice-detail-date" data-en="Published September 8, 2026">প্রকাশ: ৮ সেপ্টেম্বর, ২০২৬</span>
+        <h2 data-en="Winter Sports Trial Sign-Ups Open">শীতকালীন খেলার দলের ট্রায়ালে নাম লেখানো শুরু</h2>
+        <p data-en="Sign-ups are open for the cricket, football, and badminton team trials. Trials run from &lt;strong&gt;September 13 to 17, 2026&lt;/strong&gt;, every day after school.">ক্রিকেট, ফুটবল আর ব্যাডমিন্টন দলের ট্রায়ালে নাম লেখানো শুরু হয়েছে। ট্রায়াল হবে <strong>১৩ থেকে ১৭ সেপ্টেম্বর, ২০২৬</strong>, প্রতিদিন ছুটির পর।</p>
+        <p data-en="Students trying out must have an up-to-date medical form on file with the school nurse — forms are at the front office or under &quot;Health Forms&quot; in the parent portal. Students without a form on file can't take part in trials.">ট্রায়ালে অংশ নিতে হলে স্কুল নার্সের কাছে হালনাগাদ মেডিকেল ফরম জমা থাকতে হবে — ফরম পাবেন ফ্রন্ট অফিসে বা প্যারেন্ট পোর্টালের ‘হেলথ ফরম’ অংশে। ফরম জমা না থাকলে ট্রায়ালে নেওয়া হবে না।</p>
+        <p data-en="Times and places for each sport will be posted outside the gym and emailed to families the week before. Questions can go to the sports office.">কোন খেলার ট্রায়াল কখন, কোথায় — তা জিমের সামনে টাঙিয়ে দেওয়া হবে, আর আগের সপ্তাহে অভিভাবকদের ইমেইলেও জানানো হবে। কিছু জানার থাকলে ক্রীড়া অফিসে যোগাযোগ করুন।</p>
+        <a href="index.html#notice-board" class="btn btn-ghost btn-sm" data-en="← Back to Notice Board">← নোটিশ বোর্ডে ফিরুন</a>
       </div>
     </div>
   </section>
@@ -132,40 +139,41 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h4>Brightlands International</h4>
-        <p>An internationally minded Pre-K–12 school in Ellery Bay, teaching curious minds to think globally since 1992.</p>
+        <h4 data-en="Nobodiganta International">নবদিগন্ত ইন্টারন্যাশনাল</h4>
+        <p data-en="An English-medium school in Uttara, Dhaka, from Playgroup to A Level — keeping children curious since 1992.">উত্তরার একটা ইংলিশ মিডিয়াম স্কুল, প্লে-গ্রুপ থেকে এ লেভেল পর্যন্ত। ১৯৯২ সাল থেকে বাচ্চাদের কৌতূহলটা বাঁচিয়ে রেখে পড়াচ্ছি।</p>
         <form class="newsletter">
-          <input type="email" placeholder="Your email address" required>
-          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          <input type="email" placeholder="আপনার ইমেইল" data-en-placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary btn-sm" data-en="Subscribe">সাবস্ক্রাইব</button>
         </form>
         <p class="newsletter-note form-note"></p>
       </div>
       <div>
-        <h4>Explore</h4>
-        <a href="history.html">Our History</a>
-        <a href="teachers.html">Our Teachers</a>
-        <a href="students.html">Our Students</a>
-        <a href="results.html">Exam Results</a>
+        <h4 data-en="Explore">ঘুরে দেখুন</h4>
+        <a href="history.html" data-en="Our History">আমাদের ইতিহাস</a>
+        <a href="teachers.html" data-en="Our Teachers">আমাদের শিক্ষক</a>
+        <a href="students.html" data-en="Our Students">শিক্ষার্থী</a>
+        <a href="results.html" data-en="Exam Results">পরীক্ষার ফলাফল</a>
       </div>
       <div>
-        <h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <h4 data-en="School">প্রতিষ্ঠান</h4>
+        <a href="about.html" data-en="About Us">আমাদের কথা</a>
+        <a href="blog.html" data-en="Blog">ব্লগ</a>
+        <a href="notice-details.html" data-en="Notice Board">নোটিশ বোর্ড</a>
+        <a href="contact.html" data-en="Contact">যোগাযোগ</a>
       </div>
       <div>
-        <h4>Visit</h4>
-        <p>14 Lakeview Terrace<br>Ellery Bay, WA 98110</p>
-        <p>admissions@brightlands.example<br>(360) 555-0199</p>
+        <h4 data-en="Visit">ঠিকানা</h4>
+        <p data-en="House 12, Road 7, Sector 4&lt;br&gt;Uttara, Dhaka 1230">বাড়ি ১২, রোড ৭, সেক্টর ৪<br>উত্তরা, ঢাকা-১২৩০</p>
+        <p data-en="info@yourschool.edu.bd&lt;br&gt;+880 1700-000000">info@yourschool.edu.bd<br>০১৭০০-০০০০০০</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Brightlands International School. All rights reserved.</span>
-      <span>Design template — replace placeholder text, photos, and contact details before publishing.</span>
+      <span data-en="© 2026 Nobodiganta International School. All rights reserved.">© ২০২৬ নবদিগন্ত ইন্টারন্যাশনাল স্কুল। সর্বস্বত্ব সংরক্ষিত।</span>
+      <span data-en="Design template — replace placeholder text, photos, and contact details before publishing.">ডেমো টেমপ্লেট — চালু করার আগে লেখা, ছবি আর যোগাযোগের তথ্য বদলে নিন।</span>
     </div>
   </div>
 </footer>
-<button id="back-to-top" class="back-to-top" aria-label="Back to top">&#8593;</button>
+<button id="back-to-top" class="back-to-top" aria-label="উপরে যান" data-en-aria-label="Back to top">&#8593;</button>
 <script src="script.js"></script>
 </body>
 </html>

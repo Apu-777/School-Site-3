@@ -1,4 +1,81 @@
-// Brightlands International School — shared site behavior
+// Nobodiganta International School — shared site behavior
+
+/* ---------------------------------------------------------------
+   Language switcher (Bengali default, English optional)
+   - Bengali text is written directly in the HTML.
+   - English lives in data-en (inner HTML) and data-en-<attr>
+     (placeholder, alt, aria-label, title) on the same element.
+   - The choice is remembered in localStorage under "site-lang".
+---------------------------------------------------------------- */
+var SiteLang = (function () {
+  var KEY = "site-lang";
+  var ATTRS = ["placeholder", "alt", "aria-label", "title"];
+  var BN_DIGITS = "০১২৩৪৫৬৭৮৯";
+
+  function stored() {
+    try { return localStorage.getItem(KEY) === "en" ? "en" : "bn"; } catch (e) { return "bn"; }
+  }
+  function remember(lang) {
+    try { localStorage.setItem(KEY, lang); } catch (e) { /* storage unavailable: still switch for this page */ }
+  }
+
+  var current = "bn";
+
+  function apply(lang) {
+    current = lang;
+    var root = document.documentElement;
+    root.lang = lang;
+
+    document.querySelectorAll("[data-en]").forEach(function (el) {
+      if (el._bn === undefined) el._bn = el.innerHTML;
+      el.innerHTML = lang === "en" ? el.getAttribute("data-en") : el._bn;
+    });
+
+    ATTRS.forEach(function (attr) {
+      document.querySelectorAll("[data-en-" + attr + "]").forEach(function (el) {
+        var key = "_bn_" + attr;
+        if (el[key] === undefined) el[key] = el.getAttribute(attr) || "";
+        el.setAttribute(attr, lang === "en" ? el.getAttribute("data-en-" + attr) : el[key]);
+      });
+    });
+
+    document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
+    });
+
+    root.classList.remove("lang-pending");
+    document.dispatchEvent(new CustomEvent("sitelang", { detail: lang }));
+  }
+
+  // Set a message on an element in both languages, showing the current one.
+  function setText(el, bn, en) {
+    el._bn = bn;
+    el.setAttribute("data-en", en);
+    el.innerHTML = current === "en" ? en : bn;
+  }
+
+  // Write a number in the digits of the current language.
+  function num(value) {
+    var str = String(value);
+    if (current === "en") return str;
+    return str.replace(/[0-9]/g, function (d) { return BN_DIGITS[+d]; });
+  }
+
+  document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var lang = btn.getAttribute("data-lang");
+      if (lang === current) return;
+      remember(lang);
+      apply(lang);
+    });
+  });
+
+  // Bengali is already in the markup, so only switch when English was chosen.
+  if (stored() === "en") apply("en");
+  else document.documentElement.classList.remove("lang-pending");
+
+  return { setText: setText, num: num, current: function () { return current; } };
+})();
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -9,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var current = document.documentElement.getAttribute("data-theme");
       var next = current === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", next);
-      try { localStorage.setItem("bl-theme", next); } catch (e) {}
+      try { localStorage.setItem("nd-theme", next); } catch (e) {}
     });
   }
 
@@ -27,11 +104,11 @@ document.addEventListener("DOMContentLoaded", function () {
   var noticeClose = document.querySelector(".notice-close");
   if (notice && noticeClose) {
     var dismissed = false;
-    try { dismissed = localStorage.getItem("bl-notice-dismissed") === "1"; } catch (e) {}
+    try { dismissed = localStorage.getItem("nd-notice-dismissed") === "1"; } catch (e) {}
     if (dismissed) notice.classList.add("hidden");
     noticeClose.addEventListener("click", function () {
       notice.classList.add("hidden");
-      try { localStorage.setItem("bl-notice-dismissed", "1"); } catch (e) {}
+      try { localStorage.setItem("nd-notice-dismissed", "1"); } catch (e) {}
     });
   }
 
@@ -53,28 +130,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ---------- Animated stat counters ---------- */
   var counters = document.querySelectorAll("[data-count]");
+  function showCount(el, value) {
+    el.textContent = SiteLang.num(value) + (el.getAttribute("data-suffix") || "");
+  }
+  counters.forEach(function (el) { showCount(el, 0); });
+  // Re-write finished counters when the language changes.
+  document.addEventListener("sitelang", function () {
+    counters.forEach(function (el) { showCount(el, el._shown || 0); });
+  });
   if (counters.length && "IntersectionObserver" in window) {
     var counterObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         var el = entry.target;
         var target = parseFloat(el.getAttribute("data-count"));
-        var suffix = el.getAttribute("data-suffix") || "";
         var duration = 1400;
         var startTime = null;
         function step(ts) {
           if (!startTime) startTime = ts;
           var progress = Math.min((ts - startTime) / duration, 1);
-          var value = Math.floor(progress * target);
-          el.textContent = value + suffix;
+          el._shown = progress < 1 ? Math.floor(progress * target) : target;
+          showCount(el, el._shown);
           if (progress < 1) requestAnimationFrame(step);
-          else el.textContent = target + suffix;
         }
         requestAnimationFrame(step);
         counterObserver.unobserve(el);
       });
     }, { threshold: 0.4 });
     counters.forEach(function (el) { counterObserver.observe(el); });
+  } else {
+    counters.forEach(function (el) { el._shown = parseFloat(el.getAttribute("data-count")); showCount(el, el._shown); });
   }
 
   /* ---------- Curriculum tabs ---------- */
@@ -105,7 +190,9 @@ document.addEventListener("DOMContentLoaded", function () {
     slides.forEach(function (_, i) {
       var dot = document.createElement("button");
       if (i === 0) dot.classList.add("active");
-      dot.setAttribute("aria-label", "Go to testimonial " + (i + 1));
+      dot.setAttribute("aria-label", "মতামত " + SiteLang.num(i + 1));
+      dot.setAttribute("data-en-aria-label", "Go to testimonial " + (i + 1));
+      if (SiteLang.current() === "en") dot.setAttribute("aria-label", "Go to testimonial " + (i + 1));
       dot.addEventListener("click", function () { goTo(i); resetTimer(); });
       dotsWrap.appendChild(dot);
     });
@@ -252,9 +339,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       var status = contactForm.querySelector(".form-status");
       if (status) {
-        status.textContent = valid
-          ? "Thanks — this is a demo form, so nothing was actually sent yet."
-          : "Please fill in the highlighted fields correctly.";
+        if (valid) {
+          SiteLang.setText(status, "ধন্যবাদ! এটা একটা ডেমো ফর্ম, তাই আসলে কিছু পাঠানো হয়নি।",
+            "Thanks — this is a demo form, so nothing was actually sent yet.");
+        } else {
+          SiteLang.setText(status, "লাল দাগ দেওয়া ঘরগুলো ঠিকমতো পূরণ করুন।",
+            "Please fill in the highlighted fields correctly.");
+        }
         status.classList.toggle("success", valid);
       }
     });
@@ -268,7 +359,8 @@ document.addEventListener("DOMContentLoaded", function () {
       var input = newsletterForm.querySelector("input");
       var note = newsletterForm.parentElement.querySelector(".newsletter-note");
       if (input && input.value.trim() && note) {
-        note.textContent = "Thanks for subscribing — demo only, no email sent.";
+        SiteLang.setText(note, "সাবস্ক্রাইব করার জন্য ধন্যবাদ — এটা ডেমো, কোনো ইমেইল যায়নি।",
+          "Thanks for subscribing — demo only, no email sent.");
         input.value = "";
       }
     });
