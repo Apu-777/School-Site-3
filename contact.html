@@ -1,57 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Brightlands International</title>
-<script>(function(){try{var t=localStorage.getItem('bl-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<script>(function(){try{var t=localStorage.getItem('nd-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<script>try{if(localStorage.getItem("site-lang")==="en"){document.documentElement.lang="en";document.documentElement.classList.add("lang-pending");}}catch(e){}</script>
+<title data-en="Contact — Nobodiganta International">যোগাযোগ — নবদিগন্ত ইন্টারন্যাশনাল</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Anek+Bangla:wght@600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="notice-bar">
-  <span><strong>Admissions Open</strong> — Fall 2027 applications now being accepted. <a href="contact.html" style="text-decoration:underline;">Apply Today →</a></span>
-  <button class="notice-close" aria-label="Dismiss notice">&times;</button>
+  <span data-en="&lt;strong&gt;Admissions Open&lt;/strong&gt; — applications for the 2027–28 school year are now being accepted. &lt;a href=&quot;contact.html&quot; style=&quot;text-decoration:underline;&quot;&gt;Apply Today →&lt;/a&gt;"><strong>ভর্তি চলছে</strong> — ২০২৭–২৮ শিক্ষাবর্ষের আবেদন নেওয়া হচ্ছে। <a href="contact.html" style="text-decoration:underline;">এখনই আবেদন করুন →</a></span>
+  <button class="notice-close" aria-label="নোটিশ বন্ধ করুন" data-en-aria-label="Dismiss notice">&times;</button>
 </div>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="17" cy="17" r="16" fill="#0F5257"/>
         <path d="M9 20L17 9L25 20" stroke="#FFC145" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12.5 24.5L17 20L21.5 24.5" stroke="#FF6B4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span class="brand-name">Brightlands<br>International</span>
+      <span class="brand-name" data-en="Nobodiganta&lt;br&gt;International">নবদিগন্ত<br>ইন্টারন্যাশনাল</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    <button class="nav-toggle" aria-label="মেনু খুলুন" data-en-aria-label="Toggle menu"><span></span></button>
     <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="history.html">History</a>
-      <a href="teachers.html">Teachers</a>
-      <a href="students.html">Students</a>
-      <a href="results.html">Exam Results</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="index.html" data-en="Home">হোম</a>
+      <a href="history.html" data-en="History">ইতিহাস</a>
+      <a href="teachers.html" data-en="Teachers">শিক্ষক</a>
+      <a href="students.html" data-en="Students">শিক্ষার্থী</a>
+      <a href="results.html" data-en="Exam Results">ফলাফল</a>
+      <a href="about.html" data-en="About">আমাদের কথা</a>
+      <a href="blog.html" data-en="Blog">ব্লগ</a>
+      <a href="contact.html" class="active" data-en="Contact">যোগাযোগ</a>
     </nav>
-    <button class="theme-toggle" aria-label="Toggle dark mode">
+    <div class="lang-switch" role="group" aria-label="ভাষা বেছে নিন / Choose language">
+      <button type="button" data-lang="bn" aria-pressed="true" lang="bn">বাংলা</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+    <button class="theme-toggle" aria-label="ডার্ক মোড চালু/বন্ধ" data-en-aria-label="Toggle dark mode">
       <span class="icon-light">&#9789;</span>
       <span class="icon-dark">&#9728;</span>
     </button>
-    <a href="contact.html" class="btn btn-primary btn-sm">Enquire</a>
+    <a href="contact.html" class="btn btn-primary btn-sm" data-en="Enquire">খোঁজ নিন</a>
   </div>
 </header>
 
 <main>
 
-  <section class="page-hero">
+  <section class="page-hero has-bg" style="--hero-bg: url('images/auditorium.jpg')">
     <div class="wrap">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
-      <h1>Talk to the admissions office.</h1>
-      <p>Whether you're touring, applying, or just curious — the fastest way to reach us is below.</p>
+      <div class="breadcrumb"><a href="index.html" data-en="Home">হোম</a> / <span data-en="Contact">যোগাযোগ</span></div>
+      <h1 data-en="Talk to the admissions office.">ভর্তি অফিসের সাথে কথা বলুন।</h1>
+      <p data-en="Whether you're touring, applying, or just curious — the fastest ways to reach us are below.">ক্যাম্পাস দেখতে চান, ভর্তি করাতে চান, নাকি শুধু কিছু জানতে চান — নিচের যেকোনো উপায়ে সবচেয়ে তাড়াতাড়ি আমাদের পাবেন।</p>
     </div>
   </section>
 
@@ -59,76 +65,76 @@
     <div class="wrap contact-grid">
 
       <div>
-        <h2>Get in Touch</h2>
+        <h2 data-en="Get in Touch">যোগাযোগের তথ্য</h2>
         <div class="contact-info-card">
           <span class="icon">@</span>
           <div>
-            <h3>Email</h3>
-            <p>admissions@brightlands.example</p>
+            <h3 data-en="Email">ইমেইল</h3>
+            <p>info@yourschool.edu.bd</p>
           </div>
         </div>
         <div class="contact-info-card">
           <span class="icon">&#9742;</span>
           <div>
-            <h3>Phone</h3>
-            <p>(360) 555-0199, Mon–Fri, 8:00am–4:00pm</p>
+            <h3 data-en="Phone">ফোন</h3>
+            <p data-en="+880 1700-000000, Sun–Thu, 8:00am–4:00pm">০১৭০০-০০০০০০, রবি–বৃহস্পতি, সকাল ৮টা–বিকেল ৪টা</p>
           </div>
         </div>
         <div class="contact-info-card">
           <span class="icon">&#9673;</span>
           <div>
-            <h3>Address</h3>
-            <p>14 Lakeview Terrace, Ellery Bay, WA 98110</p>
+            <h3 data-en="Address">ঠিকানা</h3>
+            <p data-en="House 12, Road 7, Sector 4, Uttara, Dhaka 1230">বাড়ি ১২, রোড ৭, সেক্টর ৪, উত্তরা, ঢাকা-১২৩০</p>
           </div>
         </div>
         <div class="contact-info-card">
           <span class="icon">&#128337;</span>
           <div>
-            <h3>Office Hours</h3>
-            <p>Monday–Friday, 8:00am–4:00pm. Campus tours run Tuesday and Thursday mornings.</p>
+            <h3 data-en="Office Hours">অফিস সময়</h3>
+            <p data-en="Sunday–Thursday, 8:00am–4:00pm. Campus tours run Sunday and Tuesday mornings.">রবি থেকে বৃহস্পতিবার, সকাল ৮টা–বিকেল ৪টা। ক্যাম্পাস ট্যুর হয় রবি আর মঙ্গলবার সকালে।</p>
           </div>
         </div>
 
-        <div class="map-box">
-          Map embed placeholder — replace with a Google Maps or OpenStreetMap embed of 14 Lakeview Terrace, Ellery Bay, WA.
+        <div class="map-box" data-en="Map embed placeholder — replace with a Google Maps or OpenStreetMap embed of House 12, Road 7, Sector 4, Uttara, Dhaka.">
+          এখানে গুগল ম্যাপ বা ওপেনস্ট্রিটম্যাপ বসান — বাড়ি ১২, রোড ৭, সেক্টর ৪, উত্তরা, ঢাকা।
         </div>
       </div>
 
       <div>
-        <h2>Send a Message</h2>
+        <h2 data-en="Send a Message">মেসেজ পাঠান</h2>
         <form class="contact-form" novalidate>
           <div class="form-grid">
             <div class="form-field">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Jordan Casey" required>
-              <span class="field-error">Please enter your name.</span>
+              <label for="name" data-en="Full Name">পুরো নাম</label>
+              <input type="text" id="name" name="name" placeholder="যেমন: তানভীর আহমেদ" data-en-placeholder="e.g. Tanvir Ahmed" required>
+              <span class="field-error" data-en="Please enter your name.">আপনার নামটা লিখুন।</span>
             </div>
             <div class="form-field">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="jordan@example.com" required>
-              <span class="field-error">Please enter a valid email address.</span>
+              <label for="email" data-en="Email Address">ইমেইল ঠিকানা</label>
+              <input type="email" id="email" name="email" placeholder="tanvir@example.com" required>
+              <span class="field-error" data-en="Please enter a valid email address.">সঠিক ইমেইল ঠিকানা দিন।</span>
             </div>
             <div class="form-field">
-              <label for="phone">Phone (optional)</label>
-              <input type="tel" id="phone" name="phone" placeholder="(360) 555-0100">
+              <label for="phone" data-en="Phone (optional)">ফোন (না দিলেও চলবে)</label>
+              <input type="tel" id="phone" name="phone" placeholder="০১৭xx-xxxxxx" data-en-placeholder="017xx-xxxxxx">
             </div>
             <div class="form-field">
-              <label for="reason">I'm reaching out about</label>
+              <label for="reason" data-en="I'm reaching out about">কী বিষয়ে যোগাযোগ করছেন</label>
               <select id="reason" name="reason">
-                <option>Admissions &amp; Enrollment</option>
-                <option>Campus Tour Request</option>
-                <option>Exam Results / Registrar</option>
-                <option>General Question</option>
+                <option data-en="Admissions &amp; Enrollment">ভর্তি সংক্রান্ত</option>
+                <option data-en="Campus Tour Request">ক্যাম্পাস ট্যুর</option>
+                <option data-en="Exam Results / Registrar">পরীক্ষার ফলাফল / রেজিস্ট্রার</option>
+                <option data-en="General Question">অন্য কোনো প্রশ্ন</option>
               </select>
             </div>
             <div class="form-field full">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about what you're looking for..." required></textarea>
-              <span class="field-error">Please write a short message.</span>
+              <label for="message" data-en="Message">মেসেজ</label>
+              <textarea id="message" name="message" rows="5" placeholder="কী জানতে চান, একটু লিখুন..." data-en-placeholder="Tell us a bit about what you're looking for..." required></textarea>
+              <span class="field-error" data-en="Please write a short message.">ছোট করে একটা মেসেজ লিখুন।</span>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-          <p class="form-note form-status">We typically reply within two business days.</p>
+          <button type="submit" class="btn btn-primary" data-en="Send Message">মেসেজ পাঠান</button>
+          <p class="form-note form-status" data-en="We usually reply within two working days.">সাধারণত দুই কর্মদিবসের মধ্যে আমরা উত্তর দিই।</p>
         </form>
       </div>
 
@@ -141,40 +147,41 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h4>Brightlands International</h4>
-        <p>An internationally minded Pre-K–12 school in Ellery Bay, teaching curious minds to think globally since 1992.</p>
+        <h4 data-en="Nobodiganta International">নবদিগন্ত ইন্টারন্যাশনাল</h4>
+        <p data-en="An English-medium school in Uttara, Dhaka, from Playgroup to A Level — keeping children curious since 1992.">উত্তরার একটা ইংলিশ মিডিয়াম স্কুল, প্লে-গ্রুপ থেকে এ লেভেল পর্যন্ত। ১৯৯২ সাল থেকে বাচ্চাদের কৌতূহলটা বাঁচিয়ে রেখে পড়াচ্ছি।</p>
         <form class="newsletter">
-          <input type="email" placeholder="Your email address" required>
-          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          <input type="email" placeholder="আপনার ইমেইল" data-en-placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary btn-sm" data-en="Subscribe">সাবস্ক্রাইব</button>
         </form>
         <p class="newsletter-note form-note"></p>
       </div>
       <div>
-        <h4>Explore</h4>
-        <a href="history.html">Our History</a>
-        <a href="teachers.html">Our Teachers</a>
-        <a href="students.html">Our Students</a>
-        <a href="results.html">Exam Results</a>
+        <h4 data-en="Explore">ঘুরে দেখুন</h4>
+        <a href="history.html" data-en="Our History">আমাদের ইতিহাস</a>
+        <a href="teachers.html" data-en="Our Teachers">আমাদের শিক্ষক</a>
+        <a href="students.html" data-en="Our Students">শিক্ষার্থী</a>
+        <a href="results.html" data-en="Exam Results">পরীক্ষার ফলাফল</a>
       </div>
       <div>
-        <h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <h4 data-en="School">প্রতিষ্ঠান</h4>
+        <a href="about.html" data-en="About Us">আমাদের কথা</a>
+        <a href="blog.html" data-en="Blog">ব্লগ</a>
+        <a href="notice-details.html" data-en="Notice Board">নোটিশ বোর্ড</a>
+        <a href="contact.html" data-en="Contact">যোগাযোগ</a>
       </div>
       <div>
-        <h4>Visit</h4>
-        <p>14 Lakeview Terrace<br>Ellery Bay, WA 98110</p>
-        <p>admissions@brightlands.example<br>(360) 555-0199</p>
+        <h4 data-en="Visit">ঠিকানা</h4>
+        <p data-en="House 12, Road 7, Sector 4&lt;br&gt;Uttara, Dhaka 1230">বাড়ি ১২, রোড ৭, সেক্টর ৪<br>উত্তরা, ঢাকা-১২৩০</p>
+        <p data-en="info@yourschool.edu.bd&lt;br&gt;+880 1700-000000">info@yourschool.edu.bd<br>০১৭০০-০০০০০০</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Brightlands International School. All rights reserved.</span>
-      <span>Design template — replace placeholder text, photos, and contact details before publishing.</span>
+      <span data-en="© 2026 Nobodiganta International School. All rights reserved.">© ২০২৬ নবদিগন্ত ইন্টারন্যাশনাল স্কুল। সর্বস্বত্ব সংরক্ষিত।</span>
+      <span data-en="Design template — replace placeholder text, photos, and contact details before publishing.">ডেমো টেমপ্লেট — চালু করার আগে লেখা, ছবি আর যোগাযোগের তথ্য বদলে নিন।</span>
     </div>
   </div>
 </footer>
-<button id="back-to-top" class="back-to-top" aria-label="Back to top">&#8593;</button>
+<button id="back-to-top" class="back-to-top" aria-label="উপরে যান" data-en-aria-label="Back to top">&#8593;</button>
 <script src="script.js"></script>
 </body>
 </html>

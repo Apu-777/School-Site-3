@@ -1,168 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Teachers — Brightlands International</title>
-<script>(function(){try{var t=localStorage.getItem('bl-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<script>(function(){try{var t=localStorage.getItem('nd-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<script>try{if(localStorage.getItem("site-lang")==="en"){document.documentElement.lang="en";document.documentElement.classList.add("lang-pending");}}catch(e){}</script>
+<title data-en="Our Teachers — Nobodiganta International">আমাদের শিক্ষক — নবদিগন্ত ইন্টারন্যাশনাল</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Anek+Bangla:wght@600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="notice-bar">
-  <span><strong>Admissions Open</strong> — Fall 2027 applications now being accepted. <a href="contact.html" style="text-decoration:underline;">Apply Today →</a></span>
-  <button class="notice-close" aria-label="Dismiss notice">&times;</button>
+  <span data-en="&lt;strong&gt;Admissions Open&lt;/strong&gt; — applications for the 2027–28 school year are now being accepted. &lt;a href=&quot;contact.html&quot; style=&quot;text-decoration:underline;&quot;&gt;Apply Today →&lt;/a&gt;"><strong>ভর্তি চলছে</strong> — ২০২৭–২৮ শিক্ষাবর্ষের আবেদন নেওয়া হচ্ছে। <a href="contact.html" style="text-decoration:underline;">এখনই আবেদন করুন →</a></span>
+  <button class="notice-close" aria-label="নোটিশ বন্ধ করুন" data-en-aria-label="Dismiss notice">&times;</button>
 </div>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="17" cy="17" r="16" fill="#0F5257"/>
         <path d="M9 20L17 9L25 20" stroke="#FFC145" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12.5 24.5L17 20L21.5 24.5" stroke="#FF6B4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span class="brand-name">Brightlands<br>International</span>
+      <span class="brand-name" data-en="Nobodiganta&lt;br&gt;International">নবদিগন্ত<br>ইন্টারন্যাশনাল</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    <button class="nav-toggle" aria-label="মেনু খুলুন" data-en-aria-label="Toggle menu"><span></span></button>
     <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="history.html">History</a>
-      <a href="teachers.html" class="active">Teachers</a>
-      <a href="students.html">Students</a>
-      <a href="results.html">Exam Results</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-en="Home">হোম</a>
+      <a href="history.html" data-en="History">ইতিহাস</a>
+      <a href="teachers.html" class="active" data-en="Teachers">শিক্ষক</a>
+      <a href="students.html" data-en="Students">শিক্ষার্থী</a>
+      <a href="results.html" data-en="Exam Results">ফলাফল</a>
+      <a href="about.html" data-en="About">আমাদের কথা</a>
+      <a href="blog.html" data-en="Blog">ব্লগ</a>
+      <a href="contact.html" data-en="Contact">যোগাযোগ</a>
     </nav>
-    <button class="theme-toggle" aria-label="Toggle dark mode">
+    <div class="lang-switch" role="group" aria-label="ভাষা বেছে নিন / Choose language">
+      <button type="button" data-lang="bn" aria-pressed="true" lang="bn">বাংলা</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+    <button class="theme-toggle" aria-label="ডার্ক মোড চালু/বন্ধ" data-en-aria-label="Toggle dark mode">
       <span class="icon-light">&#9789;</span>
       <span class="icon-dark">&#9728;</span>
     </button>
-    <a href="contact.html" class="btn btn-primary btn-sm">Enquire</a>
+    <a href="contact.html" class="btn btn-primary btn-sm" data-en="Enquire">খোঁজ নিন</a>
   </div>
 </header>
 
 <main>
 
-  <section class="page-hero">
+  <section class="page-hero has-bg" style="--hero-bg: url('images/teachers-students.jpg')">
     <div class="wrap">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Teachers</div>
-      <h1>Search our faculty directory.</h1>
-      <p>85 teachers across nine departments. Search by name, or filter by department below.</p>
+      <div class="breadcrumb"><a href="index.html" data-en="Home">হোম</a> / <span data-en="Teachers">শিক্ষক</span></div>
+      <h1 data-en="Meet our faculty.">আমাদের শিক্ষকদের চিনে নিন।</h1>
+      <p data-en="85 teachers across five departments. Search by name, or filter by department below.">পাঁচটা বিভাগে ৮৫ জন শিক্ষক। নাম লিখে খুঁজুন, বা নিচে বিভাগ বেছে নিন।</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
+      <span class="eyebrow" data-en="Leadership">পরিচালনায়</span>
+      <h2 data-en="The people who lead the school.">যাঁরা স্কুলটার নেতৃত্বে আছেন।</h2>
+      <div class="lead-grid reveal">
+        <div class="lead-card">
+          <img class="lead-photo" src="images/people/chairman.jpg" alt="মাহফুজুর রহমান চৌধুরী" data-en-alt="Mahfuzur Rahman Chowdhury" width="480" height="600" loading="lazy">
+          <div>
+            <span class="lead-role" data-en="Chairman, Board of Governors">সভাপতি, পরিচালনা পর্ষদ</span>
+            <h3 data-en="Mahfuzur Rahman Chowdhury">মাহফুজুর রহমান চৌধুরী</h3>
+            <span class="lead-meta" data-en="Entrepreneur and parent · on the board since 2015">শিল্পোদ্যোক্তা ও অভিভাবক · ২০১৫ থেকে পর্ষদে</span>
+            <p class="lead-quote" data-en="“We want children to be fluent in English without forgetting their own language and roots. Every day, Nobodiganta works at keeping that balance.”">“আমরা চাই বাচ্চারা ইংরেজিতে দক্ষ হোক, কিন্তু নিজের ভাষা আর শিকড় যেন না ভোলে। নবদিগন্ত প্রতিদিন সেই ভারসাম্যটা ধরে রাখার চেষ্টা করে।”</p>
+          </div>
+        </div>
+        <div class="lead-card">
+          <img class="lead-photo" src="images/people/principal.jpg" alt="মোঃ জাহাঙ্গীর আলম" data-en-alt="Md. Jahangir Alam" width="480" height="600" loading="lazy">
+          <div>
+            <span class="lead-role" data-en="Principal">প্রধান শিক্ষক (প্রিন্সিপাল)</span>
+            <h3 data-en="Md. Jahangir Alam">মোঃ জাহাঙ্গীর আলম</h3>
+            <span class="lead-meta" data-en="M.Ed, University of Dhaka · at Nobodiganta since 2011">এম.এড, ঢাকা বিশ্ববিদ্যালয় · ২০১১ থেকে নবদিগন্তে</span>
+            <p class="lead-quote" data-en="“Good results matter, but they aren&#x27;t everything. We have one goal: no child here should ever be afraid to ask a question.”">“ভালো রেজাল্ট দরকার, কিন্তু সেটাই সব না। আমাদের লক্ষ্য একটাই — এখানে কোনো বাচ্চা যেন প্রশ্ন করতে ভয় না পায়।”</p>
+          </div>
+        </div>
+      </div>
+      <div class="faculty-head">
+        <div>
+          <h3 data-en="Our teachers">আমাদের শিক্ষকবৃন্দ</h3>
+          <p data-en="85 experienced teachers — one for every 12 students.">৮৫ জন অভিজ্ঞ শিক্ষক — প্রতি ১২ জন শিক্ষার্থীর জন্য একজন।</p>
+        </div>
+      </div>
+      <div class="faculty-collage reveal">
+        <figure><img src="images/teachers-group.jpg" alt="শিক্ষকদের গ্রুপ ছবি" data-en-alt="Group photo of teachers" loading="lazy"><figcaption data-en="Staff photo day">শিক্ষকদের ফটো সেশন</figcaption></figure>
+        <figure><img src="images/teachers-group-2.jpg" alt="মাঠে শিক্ষকরা একসাথে" data-en-alt="Teachers together on the school field" loading="lazy"><figcaption data-en="Annual staff meet">বার্ষিক শিক্ষক সম্মেলন</figcaption></figure>
+        <figure><img src="images/teachers-students.jpg" alt="শিক্ষক আর শিক্ষার্থীদের পুরোনো ছবি" data-en-alt="Teachers and students, an old school photo" loading="lazy"><figcaption data-en="From our archive">পুরোনো অ্যালবাম থেকে</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <span class="eyebrow" data-en="Faculty Directory">শিক্ষকদের তালিকা</span>
+      <h2 data-en="Find a teacher.">শিক্ষক খুঁজুন।</h2>
 
       <div class="teacher-toolbar reveal">
         <div class="teacher-search">
-          <span>&#128269;</span>
-          <input type="text" placeholder="Search teachers by name...">
+          <span aria-hidden="true">&#128269;</span>
+          <input type="text" placeholder="নাম লিখে খুঁজুন..." data-en-placeholder="Search teachers by name..." aria-label="শিক্ষকের নাম লিখে খুঁজুন" data-en-aria-label="Search teachers by name">
         </div>
         <div class="filter-bar">
-          <button class="filter-btn active" data-filter="all">All Departments</button>
-          <button class="filter-btn" data-filter="sciences">Sciences</button>
-          <button class="filter-btn" data-filter="humanities">Humanities</button>
-          <button class="filter-btn" data-filter="mathematics">Mathematics</button>
-          <button class="filter-btn" data-filter="languages">World Languages</button>
-          <button class="filter-btn" data-filter="arts">Arts</button>
+          <button class="filter-btn active" data-filter="all" data-en="All Departments">সব বিভাগ</button>
+          <button class="filter-btn" data-filter="sciences" data-en="Sciences">বিজ্ঞান</button>
+          <button class="filter-btn" data-filter="humanities" data-en="Humanities">মানবিক</button>
+          <button class="filter-btn" data-filter="mathematics" data-en="Mathematics">গণিত</button>
+          <button class="filter-btn" data-filter="languages" data-en="Languages">ভাষা</button>
+          <button class="filter-btn" data-filter="arts" data-en="Arts">শিল্প-সংস্কৃতি</button>
         </div>
       </div>
 
       <div class="teacher-grid reveal">
 
-        <div class="teacher-card" data-dept="sciences" data-name="Helena Marsh">
-          <img class="teacher-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp5HrAOjHAwzrmVb2T0WVrYzd4p76di8Bp-8KhbdCERg&s=10" alt="Helena Marsh">
-          <span class="teacher-dept">Sciences</span>
-          <h3>Helena Marsh</h3>
-          <p>Department chair and physics teacher. Leads the senior capstone review panel.</p>
-          <span class="teacher-years">At Brightlands since 2010</span>
+        <div class="teacher-card" data-dept="sciences" data-name="এ. কে. এম. কামরুজ্জামান A. K. M. Kamruzzaman">
+          <img class="teacher-photo" src="images/people/kamruzzaman.jpg" alt="এ. কে. এম. কামরুজ্জামান" data-en-alt="A. K. M. Kamruzzaman" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Sciences · Physics">বিজ্ঞান · পদার্থবিজ্ঞান</span>
+          <h3 data-en="A. K. M. Kamruzzaman">এ. কে. এম. কামরুজ্জামান</h3>
+          <p data-en="Head of Sciences; teaches A Level Physics and leads the senior capstone review panel.">বিজ্ঞান বিভাগের প্রধান, এ লেভেলে ফিজিক্স পড়ান। ক্যাপস্টোন প্রজেক্টের রিভিউ প্যানেলও তিনিই চালান।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2010">২০১০ সাল থেকে নবদিগন্তে</span>
         </div>
 
-        <div class="teacher-card" data-dept="sciences" data-name="Tariq Osei">
-<img class="teacher-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvzcarN-_bfYoZSzPh7BYxCMk0DI6yODQDVsMJEPkArw&s=10" alt="Helena Marsh">          <span class="teacher-dept">Sciences</span>
-          <h3>Tariq Osei</h3>
-          <p>Biology and environmental science. Runs the campus wetlands restoration project.</p>
-          <span class="teacher-years">At Brightlands since 2016</span>
+        <div class="teacher-card" data-dept="sciences" data-name="তাহমিনা আক্তার Tahmina Akter">
+          <img class="teacher-photo" src="images/people/tahmina.jpg" alt="তাহমিনা আক্তার" data-en-alt="Tahmina Akter" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Sciences · Biology">বিজ্ঞান · জীববিজ্ঞান</span>
+          <h3 data-en="Tahmina Akter">তাহমিনা আক্তার</h3>
+          <p data-en="Teaches Biology and Environmental Science; built the rooftop garden and the eco club.">বায়োলজি আর পরিবেশবিজ্ঞান পড়ান। স্কুলের ছাদবাগান আর ইকো ক্লাব তাঁর হাতেই গড়া।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2016">২০১৬ সাল থেকে নবদিগন্তে</span>
         </div>
 
-        <div class="teacher-card" data-dept="humanities" data-name="Isabel Duarte">
-<img class="teacher-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr5Io_-YMZVDE-KoIa2ui99W70e9SB3x4ZKdIGdMIj9Q&s=10" alt="Helena Marsh">          <span class="teacher-dept">Humanities</span>
-          <h3>Isabel Duarte</h3>
-          <p>World history, taught as seminar discussion from Grade 9 onward. Coaches Model UN.</p>
-          <span class="teacher-years">At Brightlands since 2013</span>
+        <div class="teacher-card" data-dept="humanities" data-name="ইমরান মাহমুদ Imran Mahmud">
+          <img class="teacher-photo" src="images/people/imran.jpg" alt="ইমরান মাহমুদ" data-en-alt="Imran Mahmud" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Humanities · History">মানবিক · ইতিহাস</span>
+          <h3 data-en="Imran Mahmud">ইমরান মাহমুদ</h3>
+          <p data-en="Teaches world history as seminar discussion from Class 9 onward; coaches the Model UN team.">ক্লাস নাইন থেকে বিশ্ব ইতিহাস পড়ান আলোচনার মাধ্যমে। মডেল ইউএন দলের কোচও তিনি।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2013">২০১৩ সাল থেকে নবদিগন্তে</span>
         </div>
 
-        <div class="teacher-card" data-dept="humanities" data-name="Owen Blackwood">
-<img class="teacher-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyiFvQc7mS8nMXDjPfgZokXb_1xCGzebxria9T4JxS6w&s=10" alt="Helena Marsh">          <span class="teacher-dept">Humanities</span>
-          <h3>Owen Blackwood</h3>
-          <p>English literature. Faculty advisor to the student literary magazine.</p>
-          <span class="teacher-years">At Brightlands since 2019</span>
+        <div class="teacher-card" data-dept="humanities" data-name="রোকসানা পারভীন Roksana Parvin">
+          <img class="teacher-photo" src="images/people/roksana.jpg" alt="রোকসানা পারভীন" data-en-alt="Roksana Parvin" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Humanities · English Literature">মানবিক · ইংরেজি সাহিত্য</span>
+          <h3 data-en="Roksana Parvin">রোকসানা পারভীন</h3>
+          <p data-en="Teaches English Literature; faculty advisor to the student literary magazine, Nobopotro.">ইংরেজি সাহিত্য পড়ান। স্কুলের সাহিত্য ম্যাগাজিন ‘নবপত্র’-এর উপদেষ্টা।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2009">২০০৯ সাল থেকে নবদিগন্তে</span>
         </div>
 
-        <div class="teacher-card" data-dept="mathematics" data-name="Priyanka Rao">
-<img class="teacher-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7W2wn0DEiO2x0Ic7sqVRokIa_ss64Ev-TVKi5puhv-g&s=10" alt="Helena Marsh">          <span class="teacher-dept">Mathematics</span>
-          <h3>Priyanka Rao</h3>
-          <p>Runs the advanced problem-solving track and coaches the math olympiad team.</p>
-          <span class="teacher-years">At Brightlands since 2012</span>
+        <div class="teacher-card" data-dept="mathematics" data-name="মাসুদ রানা Masud Rana">
+          <img class="teacher-photo" src="images/people/masud.jpg" alt="মাসুদ রানা" data-en-alt="Masud Rana" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Mathematics">গণিত</span>
+          <h3 data-en="Masud Rana">মাসুদ রানা</h3>
+          <p data-en="Runs the advanced problem-solving track and coaches the Math Olympiad team.">অ্যাডভান্সড প্রবলেম-সলভিং ট্র্যাক চালান, আর গণিত অলিম্পিয়াড দলের কোচ।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2012">২০১২ সাল থেকে নবদিগন্তে</span>
         </div>
 
-        <div class="teacher-card" data-dept="mathematics" data-name="Callum Reyes">
-<img class="teacher-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvrge4pCTLzz_O5llKu6ezFRljS9cf7_5oRICW92hFFg&s=10" alt="Helena Marsh">          <span class="teacher-dept">Mathematics</span>
-          <h3>Callum Reyes</h3>
-          <p>Teaches algebra through pre-calculus with an emphasis on applied modeling.</p>
-          <span class="teacher-years">At Brightlands since 2021</span>
+        <div class="teacher-card" data-dept="mathematics" data-name="আরিফুল ইসলাম Ariful Islam">
+          <img class="teacher-photo" src="images/people/ariful.jpg" alt="আরিফুল ইসলাম" data-en-alt="Ariful Islam" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Mathematics">গণিত</span>
+          <h3 data-en="Ariful Islam">আরিফুল ইসলাম</h3>
+          <p data-en="Teaches algebra through pre-calculus, explaining maths through real-life examples.">অ্যালজেব্রা থেকে প্রি-ক্যালকুলাস পড়ান — বাস্তব উদাহরণ দিয়ে অঙ্ক বোঝাতে তাঁর জুড়ি নেই।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2021">২০২১ সাল থেকে নবদিগন্তে</span>
         </div>
 
-        <div class="teacher-card" data-dept="languages" data-name="Amara Nwosu">
-<img class="teacher-photo" src="https://www.tbsnews.net/sites/default/files/styles/big_2/public/images/2025/12/03/zmh_1_16x9.png" alt="Helena Marsh">          <span class="teacher-dept">World Languages</span>
-          <h3>Amara Nwosu</h3>
-          <p>Teaches French and organizes the Grade 10 immersion exchange in Lyon.</p>
-          <span class="teacher-years">At Brightlands since 2014</span>
+        <div class="teacher-card" data-dept="languages" data-name="শাহনাজ বেগম Shahnaz Begum">
+          <img class="teacher-photo" src="images/people/shahnaz.jpg" alt="শাহনাজ বেগম" data-en-alt="Shahnaz Begum" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Languages · Bangla">ভাষা · বাংলা</span>
+          <h3 data-en="Shahnaz Begum">শাহনাজ বেগম</h3>
+          <p data-en="Teaches Bangla across all classes and runs the debate club.">সব ক্লাসে বাংলা পড়ান, আর বিতর্ক ক্লাবের দেখাশোনা করেন।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2014">২০১৪ সাল থেকে নবদিগন্তে</span>
         </div>
 
-        <div class="teacher-card" data-dept="languages" data-name="Wen Jiang">
-<img class="teacher-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ79PsD3nCXiKA6VMY5z7bA8gucwKS1LI1juN7mLe4qzQ&s=10" alt="Helena Marsh">          <span class="teacher-dept">World Languages</span>
-          <h3>Wen Jiang</h3>
-          <p>Mandarin instructor across all levels; leads the Lunar New Year campus festival.</p>
-          <span class="teacher-years">At Brightlands since 2017</span>
+        <div class="teacher-card" data-dept="languages" data-name="শ্যামল কান্তি দাস Shyamal Kanti Das">
+          <img class="teacher-photo" src="images/people/shyamal.jpg" alt="শ্যামল কান্তি দাস" data-en-alt="Shyamal Kanti Das" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Languages · English">ভাষা · ইংরেজি</span>
+          <h3 data-en="Shyamal Kanti Das">শ্যামল কান্তি দাস</h3>
+          <p data-en="Teaches English Language and IELTS prep, and supports students who need extra help with English.">ইংলিশ ল্যাঙ্গুয়েজ আর IELTS প্রস্তুতি পড়ান। যাদের ইংরেজিতে একটু বাড়তি সাহায্য লাগে, তাদের দায়িত্বও তাঁর।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2017">২০১৭ সাল থেকে নবদিগন্তে</span>
         </div>
 
-        <div class="teacher-card" data-dept="languages" data-name="Diego Fuentes">
-<img class="teacher-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7jV5YpMyGbqAZs1PmblbJ-zxnJHYbeRa8rqVTZD27bw&s=10" alt="Helena Marsh">          <span class="teacher-dept">World Languages</span>
-          <h3>Diego Fuentes</h3>
-          <p>Teaches Spanish and coordinates the annual pen-pal exchange with a partner school in Oaxaca.</p>
-          <span class="teacher-years">At Brightlands since 2020</span>
+        <div class="teacher-card" data-dept="humanities" data-name="আবুল কালাম আজাদ Abul Kalam Azad">
+          <img class="teacher-photo" src="images/people/azad.jpg" alt="আবুল কালাম আজাদ" data-en-alt="Abul Kalam Azad" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Humanities · Bangladesh Studies">মানবিক · বাংলাদেশ স্টাডিজ</span>
+          <h3 data-en="Abul Kalam Azad">আবুল কালাম আজাদ</h3>
+          <p data-en="Teaches Bangladesh Studies; started the Liberation War corner and the yearly heritage trip.">বাংলাদেশ স্টাডিজ পড়ান। মুক্তিযুদ্ধ কর্নার আর প্রতি বছরের ইতিহাস ভ্রমণ তাঁরই উদ্যোগ।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2008">২০০৮ সাল থেকে নবদিগন্তে</span>
         </div>
 
-        <div class="teacher-card" data-dept="arts" data-name="Freya Lindqvist">
-<img class="teacher-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLeta17L2JXmpspTO5Wg51hRnQeXKRDgk08LQRy2lTQg&s=10" alt="Helena Marsh">          <span class="teacher-dept">Arts</span>
-          <h3>Freya Lindqvist</h3>
-          <p>Directs the black-box theater program and its three student-written productions each year.</p>
-          <span class="teacher-years">At Brightlands since 2015</span>
+        <div class="teacher-card" data-dept="arts" data-name="তাপস কুমার পাল Tapas Kumar Paul">
+          <img class="teacher-photo" src="images/people/tapas.jpg" alt="তাপস কুমার পাল" data-en-alt="Tapas Kumar Paul" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Arts · Music">শিল্প-সংস্কৃতি · সংগীত</span>
+          <h3 data-en="Tapas Kumar Paul">তাপস কুমার পাল</h3>
+          <p data-en="Leads the school choir and the after-school music class; started the songwriting elective in 2023.">স্কুলের গানের দল আর বিকেলের সংগীত ক্লাস চালান। ২০২৩ সালে গান লেখার ইলেকটিভটা তিনিই শুরু করেন।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2018">২০১৮ সাল থেকে নবদিগন্তে</span>
         </div>
 
-        <div class="teacher-card" data-dept="arts" data-name="Malik Anderson">
-<img class="teacher-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFujYqEd2utha8bR_Mf1L2WDkoJY5S8NCunkBN2DAIYw&s=10" alt="Helena Marsh">          <span class="teacher-dept">Arts</span>
-          <h3>Malik Anderson</h3>
-          <p>Leads choir and the after-school jazz ensemble. Started the songwriting elective in 2023.</p>
-          <span class="teacher-years">At Brightlands since 2018</span>
+        <div class="teacher-card" data-dept="arts" data-name="মেহেদী হাসান Mehedi Hasan">
+          <img class="teacher-photo" src="images/people/mehedi.jpg" alt="মেহেদী হাসান" data-en-alt="Mehedi Hasan" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Arts · Fine Art">শিল্প-সংস্কৃতি · চারুকলা</span>
+          <h3 data-en="Mehedi Hasan">মেহেদী হাসান</h3>
+          <p data-en="Teaches art and craft, and directs the three student productions staged each year.">আর্ট আর ক্রাফট পড়ান, বছরে তিনটা নাটক মঞ্চায়নের দায়িত্বও তাঁর।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2015">২০১৫ সাল থেকে নবদিগন্তে</span>
         </div>
 
-        <div class="teacher-card" data-dept="sciences" data-name="Greta Lindholm">
-<img class="teacher-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8DtM1fEdloUzNUMpjcUVCzPpwWpwyHJ7dUn5OaAoXRg&s=10" alt="Helena Marsh">          <span class="teacher-dept">Sciences</span>
-          <h3>Greta Lindholm</h3>
-          <p>Chemistry teacher and safety officer for every lab space on campus.</p>
-          <span class="teacher-years">At Brightlands since 2022</span>
+        <div class="teacher-card" data-dept="sciences" data-name="সাজ্জাদ হোসেন Sajjad Hossain">
+          <img class="teacher-photo" src="images/people/sajjad.jpg" alt="সাজ্জাদ হোসেন" data-en-alt="Sajjad Hossain" width="480" height="600" loading="lazy">
+          <span class="teacher-dept" data-en="Sciences · Chemistry">বিজ্ঞান · রসায়ন</span>
+          <h3 data-en="Sajjad Hossain">সাজ্জাদ হোসেন</h3>
+          <p data-en="Teaches Chemistry and is safety officer for every lab space on campus.">কেমিস্ট্রি পড়ান, আর ক্যাম্পাসের সব ল্যাবের নিরাপত্তার দায়িত্বে আছেন।</p>
+          <span class="teacher-years" data-en="At Nobodiganta since 2022">২০২২ সাল থেকে নবদিগন্তে</span>
         </div>
 
       </div>
 
-      <p class="no-results">No teachers match your search. Try a different name or department.</p>
+      <p class="no-results" data-en="No teachers match your search. Try a different name or department.">এই নামে বা বিভাগে কোনো শিক্ষক পাওয়া যায়নি। অন্য নাম বা বিভাগ দিয়ে চেষ্টা করুন।</p>
 
     </div>
   </section>
@@ -173,40 +230,41 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h4>Brightlands International</h4>
-        <p>An internationally minded Pre-K–12 school in Ellery Bay, teaching curious minds to think globally since 1992.</p>
+        <h4 data-en="Nobodiganta International">নবদিগন্ত ইন্টারন্যাশনাল</h4>
+        <p data-en="An English-medium school in Uttara, Dhaka, from Playgroup to A Level — keeping children curious since 1992.">উত্তরার একটা ইংলিশ মিডিয়াম স্কুল, প্লে-গ্রুপ থেকে এ লেভেল পর্যন্ত। ১৯৯২ সাল থেকে বাচ্চাদের কৌতূহলটা বাঁচিয়ে রেখে পড়াচ্ছি।</p>
         <form class="newsletter">
-          <input type="email" placeholder="Your email address" required>
-          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          <input type="email" placeholder="আপনার ইমেইল" data-en-placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary btn-sm" data-en="Subscribe">সাবস্ক্রাইব</button>
         </form>
         <p class="newsletter-note form-note"></p>
       </div>
       <div>
-        <h4>Explore</h4>
-        <a href="history.html">Our History</a>
-        <a href="teachers.html">Our Teachers</a>
-        <a href="students.html">Our Students</a>
-        <a href="results.html">Exam Results</a>
+        <h4 data-en="Explore">ঘুরে দেখুন</h4>
+        <a href="history.html" data-en="Our History">আমাদের ইতিহাস</a>
+        <a href="teachers.html" data-en="Our Teachers">আমাদের শিক্ষক</a>
+        <a href="students.html" data-en="Our Students">শিক্ষার্থী</a>
+        <a href="results.html" data-en="Exam Results">পরীক্ষার ফলাফল</a>
       </div>
       <div>
-        <h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <h4 data-en="School">প্রতিষ্ঠান</h4>
+        <a href="about.html" data-en="About Us">আমাদের কথা</a>
+        <a href="blog.html" data-en="Blog">ব্লগ</a>
+        <a href="notice-details.html" data-en="Notice Board">নোটিশ বোর্ড</a>
+        <a href="contact.html" data-en="Contact">যোগাযোগ</a>
       </div>
       <div>
-        <h4>Visit</h4>
-        <p>14 Lakeview Terrace<br>Ellery Bay, WA 98110</p>
-        <p>admissions@brightlands.example<br>(360) 555-0199</p>
+        <h4 data-en="Visit">ঠিকানা</h4>
+        <p data-en="House 12, Road 7, Sector 4&lt;br&gt;Uttara, Dhaka 1230">বাড়ি ১২, রোড ৭, সেক্টর ৪<br>উত্তরা, ঢাকা-১২৩০</p>
+        <p data-en="info@yourschool.edu.bd&lt;br&gt;+880 1700-000000">info@yourschool.edu.bd<br>০১৭০০-০০০০০০</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Brightlands International School. All rights reserved.</span>
-      <span>Design template — replace placeholder text, photos, and contact details before publishing.</span>
+      <span data-en="© 2026 Nobodiganta International School. All rights reserved.">© ২০২৬ নবদিগন্ত ইন্টারন্যাশনাল স্কুল। সর্বস্বত্ব সংরক্ষিত।</span>
+      <span data-en="Design template — replace placeholder text, photos, and contact details before publishing.">ডেমো টেমপ্লেট — চালু করার আগে লেখা, ছবি আর যোগাযোগের তথ্য বদলে নিন।</span>
     </div>
   </div>
 </footer>
-<button id="back-to-top" class="back-to-top" aria-label="Back to top">&#8593;</button>
+<button id="back-to-top" class="back-to-top" aria-label="উপরে যান" data-en-aria-label="Back to top">&#8593;</button>
 <script src="script.js"></script>
 </body>
 </html>
